@@ -39,13 +39,13 @@ def select_user(conn,sql2):
     try:
         c =conn.cursor() #  获取游标
         c.execute(sql2) # 使用游标执行sql语句
-        list =c.fetchall()
         conn.commit()  #  提交
+        x =c.fetchall()
         c.close()  # 关闭游标
         print(f"执行查询sql语句成功:{sql2}")
+        return list(x)
     except Exception as e:
         print(f"执行查询sql语句失败，异常信息为:{e}")
-    return list
 # 清除数据
 def execute(conn,sql):
     '''
@@ -56,7 +56,7 @@ def execute(conn,sql):
     '''
     try:
         c =conn.cursor() #  获取游标
-        cout = c.execute(sql) # 使用游标执行sql语句
+        c.execute(sql) # 使用游标执行sql语句
         conn.commit()  #  提交
         c.close()  # 关闭游标
         print(f"执行sql语句成功:{sql}")
@@ -65,13 +65,13 @@ def execute(conn,sql):
 
 # 测试代码，用完删除
 if __name__ == '__main__':
-    db ={"host":"192.168.150.54","port":3306,"name":"apple","user":"root","pwd":"123456"}
+    db ={"host": "jy001", "port": 4406, "name": "future", "user": "root", "pwd": "123456"}
     print("dbdbdbdbdbdbddbdbdbdbdbddbdbdbddbdbdbddb",type(db))
     mobile = "18620740248"
     sql2 = f"select mobilephone from member"
     sql  = f"delete from member where mobilephone={mobile}"
     conn =connect(db)
     a= select_user(conn, sql2)
-    print(list(a))
+    print(a)
     execute(conn,sql)
     disconnect(conn)

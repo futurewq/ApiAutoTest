@@ -40,16 +40,17 @@ def test_register_success(success_data,url,db,baserequests):
     assert r.json()['code']==success_data['expect']['code']
     # 检查结果，2，检查系统中用户注册成功
     # 查询用户，检查手机号在返回的结果中。
-    sql2 = f"select mobilephone from member where mobilephone={mobile}"
+    sql2 = f"select mobilephone from member"
     conn =Mysql.connect(db)
     Mysql.select_user(conn,sql2)
     Mysql.disconnect(conn)
     # 清理环境：删除注册用户
     # 方式1：查询用户，检查手机号在返回的结果中。
-    r = Mysql.select_user(conn,sql2)
-    assert mobile in list(r).text
-    # # 方式2：从数据库中查询注册用户。
-    # r = DbOp.select_user(db, mobile)
-    # assert len(r) == 1
+    # r = Member.list(url, baserequests)
+    # assert mobile in r.text
+    # 方式2：从数据库中查询注册用户。
+    r = DbOp.select_User(db, mobile)
+    print(r)
+    assert len(r) == 1
     # # 清理环境：删除注册用户
     # DbOp.delete_user(db, mobile)

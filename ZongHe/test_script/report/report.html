@@ -426,7 +426,7 @@ function filter_table(elem) { // eslint-disable-line no-unused-vars
 }
 </script>
     <h1>report.html</h1>
-    <p>Report generated on 09-Dec-2020 at 10:30:19 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.0</p>
+    <p>Report generated on 09-Dec-2020 at 19:46:43 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.0</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -445,8 +445,8 @@ function filter_table(elem) { // eslint-disable-line no-unused-vars
         <td>Python</td>
         <td>3.8.2</td></tr></table>
     <h2>Summary</h2>
-    <p>6 tests ran in 0.12 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">6 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>, <input checked="true" class="filter" data-test-result="rerun" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="rerun">0 rerun</span>
+    <p>1 tests ran in 6.21 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">1 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>, <input checked="true" class="filter" data-test-result="rerun" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="rerun">0 rerun</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -460,72 +460,20 @@ function filter_table(elem) { // eslint-disable-line no-unused-vars
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">ZongHe/test_script/test_login.py::test_login[setup_data0-login_data0]</td>
-          <td class="col-duration">0.01</td>
+          <td class="col-name">ZongHe/test_script/test_register.py::test_register_success[success_data0]</td>
+          <td class="col-duration">6.14</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>============ &lt;class &#x27;str&#x27;&gt;
 ============ &lt;class &#x27;dict&#x27;&gt;
-测试数据：{&#x27;casedata&#x27;: {&#x27;mobilephone&#x27;: &#x27;18066668888&#x27;, &#x27;pwd&#x27;: &#x27;abcd_1&#x27;}, &#x27;expect&#x27;: {&#x27;code&#x27;: 10001, &#x27;data&#x27;: {}, &#x27;msg&#x27;: &#x27;注册成功&#x27;, &#x27;status&#x27;: 1}}
-发送post请求，url:http://192.168.150.54:8089/futureloan/mvc/api/member/register,请求参数:{&#x27;data&#x27;: {&#x27;mobilephone&#x27;: &#x27;18066668888&#x27;, &#x27;pwd&#x27;: &#x27;abcd_1&#x27;}},成功
-<br/> ------------------------------Captured stdout call------------------------------ <br/>发送post请求，url:http://192.168.150.54:8089/futureloan/mvc/api/member/login,请求参数:{&#x27;data&#x27;: {&#x27;mobilephone&#x27;: &#x27;18066668888&#x27;, &#x27;pwd&#x27;: &#x27;abcd_1&#x27;}},成功
------------- {&#x27;status&#x27;: 1, &#x27;code&#x27;: &#x27;10001&#x27;, &#x27;data&#x27;: None, &#x27;msg&#x27;: &#x27;登录成功&#x27;}
-<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">ZongHe/test_script/test_login.py::test_login[setup_data0-login_data1]</td>
-          <td class="col-duration">0.00</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>发送post请求，url:http://192.168.150.54:8089/futureloan/mvc/api/member/login,请求参数:{&#x27;data&#x27;: {&#x27;mobilephone&#x27;: &#x27;18066668888&#x27;, &#x27;pwd&#x27;: &#x27;abcd_123&#x27;}},成功
------------- {&#x27;status&#x27;: 0, &#x27;code&#x27;: &#x27;20111&#x27;, &#x27;data&#x27;: None, &#x27;msg&#x27;: &#x27;用户名或密码错误&#x27;}
-<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">ZongHe/test_script/test_login.py::test_login[setup_data0-login_data2]</td>
-          <td class="col-duration">0.00</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>发送post请求，url:http://192.168.150.54:8089/futureloan/mvc/api/member/login,请求参数:{&#x27;data&#x27;: {&#x27;mobilephone&#x27;: &#x27;18066668888&#x27;, &#x27;pwd&#x27;: &#x27;&#x27;}},成功
------------- {&#x27;status&#x27;: 0, &#x27;code&#x27;: &#x27;20103&#x27;, &#x27;data&#x27;: None, &#x27;msg&#x27;: &#x27;密码不能为空&#x27;}
-<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">ZongHe/test_script/test_login.py::test_login[setup_data0-login_data3]</td>
-          <td class="col-duration">0.00</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>发送post请求，url:http://192.168.150.54:8089/futureloan/mvc/api/member/login,请求参数:{&#x27;data&#x27;: {&#x27;mobilephone&#x27;: &#x27;18066668888&#x27;}},成功
------------- {&#x27;status&#x27;: 0, &#x27;code&#x27;: &#x27;20103&#x27;, &#x27;data&#x27;: None, &#x27;msg&#x27;: &#x27;密码不能为空&#x27;}
-<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">ZongHe/test_script/test_login.py::test_login[setup_data0-login_data4]</td>
-          <td class="col-duration">0.00</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>发送post请求，url:http://192.168.150.54:8089/futureloan/mvc/api/member/login,请求参数:{&#x27;data&#x27;: {&#x27;mobilephone&#x27;: &#x27;&#x27;, &#x27;pwd&#x27;: &#x27;abcd_1&#x27;}},成功
------------- {&#x27;status&#x27;: 0, &#x27;code&#x27;: &#x27;20103&#x27;, &#x27;data&#x27;: None, &#x27;msg&#x27;: &#x27;手机号不能为空&#x27;}
-<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">ZongHe/test_script/test_login.py::test_login[setup_data0-login_data5]</td>
-          <td class="col-duration">0.02</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>发送post请求，url:http://192.168.150.54:8089/futureloan/mvc/api/member/login,请求参数:{&#x27;data&#x27;: {&#x27;pwd&#x27;: &#x27;abcd_1&#x27;}},成功
------------- {&#x27;status&#x27;: 0, &#x27;code&#x27;: &#x27;20103&#x27;, &#x27;data&#x27;: None, &#x27;msg&#x27;: &#x27;手机号不能为空&#x27;}
-<br/> ----------------------------Captured stdout teardown---------------------------- <br/>数据库连接成功
-执行sql语句成功:delete from member where mobilephone=18066668888
+<br/> ------------------------------Captured stdout call------------------------------ <br/>测试数据:{&#x27;data&#x27;: {&#x27;mobilephone&#x27;: &#x27;18620740248&#x27;, &#x27;pwd&#x27;: &#x27;123456&#x27;}, &#x27;expect&#x27;: {&#x27;code&#x27;: &#x27;10001&#x27;, &#x27;data&#x27;: {}, &#x27;msg&#x27;: &#x27;注册成功&#x27;, &#x27;status&#x27;: 1}}
+数据库连接成功
+执行sql语句成功:delete from member where mobilephone=18620740248
+发送post请求，url:http://jy001:8081/futureloan/mvc/api/member/register,请求参数:{&#x27;data&#x27;: {&#x27;mobilephone&#x27;: &#x27;18620740248&#x27;, &#x27;pwd&#x27;: &#x27;123456&#x27;}},成功
+数据库连接成功
+执行查询sql语句成功:select mobilephone from member
+数据库连接成功
+执行查询sql语句成功:select mobilephone from member where mobilephone=18620740248
+[(&#x27;18620740248&#x27;,)]
 <br/></div></td></tr></tbody></table></body></html>

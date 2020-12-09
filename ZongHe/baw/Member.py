@@ -14,7 +14,13 @@ def register(url, baserequests, data):
     url = url + "futureloan/mvc/api/member/register"
     r = baserequests.post(url, data=data)
     return r
+# 获取用户列表
+def list(url, baserequests):
+    url = url + "futureloan/mvc/api/member/list"
+    r = baserequests.get(url)
+    return r
 
+# 登录
 def login(url, baserequests, data):
     '''
     注册接口
