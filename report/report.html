@@ -426,7 +426,7 @@ function filter_table(elem) { // eslint-disable-line no-unused-vars
 }
 </script>
     <h1>report.html</h1>
-    <p>Report generated on 09-Dec-2020 at 18:48:53 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.0</p>
+    <p>Report generated on 03-Jan-2021 at 20:37:58 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.0</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -445,8 +445,8 @@ function filter_table(elem) { // eslint-disable-line no-unused-vars
         <td>Python</td>
         <td>3.8.2</td></tr></table>
     <h2>Summary</h2>
-    <p>19 tests ran in 18.68 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">15 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">4 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>, <input checked="true" class="filter" data-test-result="rerun" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="rerun">0 rerun</span>
+    <p>3 tests ran in 0.08 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">3 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>, <input checked="true" class="filter" data-test-result="rerun" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="rerun">0 rerun</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -457,223 +457,37 @@ function filter_table(elem) { // eslint-disable-line no-unused-vars
           <th class="sortable links" col="links">Links</th></tr>
         <tr hidden="true" id="not-found-message">
           <th colspan="4">No results found. Try to check the filters</th></tr></thead>
-      <tbody class="failed results-table-row">
+      <tbody class="passed results-table-row">
         <tr>
-          <td class="col-result">Failed</td>
-          <td class="col-name">ZongHe/test_script/test_register.py::test_register_fail[fail_data0]</td>
-          <td class="col-duration">0.03</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">fail_data = {&#x27;data&#x27;: {&#x27;mobilephone&#x27;: &#x27;18610210310&#x27;, &#x27;pwd&#x27;: &#x27;123456789123456789&#x27;}, &#x27;msg&#x27;: &#x27;手机号码已被注册&#x27;}<br/>url = &#x27;http://jy001:8081/&#x27;, baserequests = &lt;ZongHe.caw.BaseRequests.BaseRequests object at 0x000001F5538A4910&gt;<br/><br/>    def test_register_fail(fail_data,url,baserequests):<br/>        print(f&quot;测试数据：{fail_data}&quot;)<br/>        # 下发注册的请求<br/>        # fixture session级别conftest.py(放置脚本层的公共方法，就是一个测试前置）<br/>        r = Member.register(url,baserequests,fail_data[&#x27;data&#x27;])<br/>        # 校验结果<br/>&gt;       assert r.json()[&#x27;msg&#x27;] == fail_data[&#x27;msg&#x27;]<br/><span class="error">E       AssertionError: assert &#x27;注册成功&#x27; == &#x27;手机号码已被注册&#x27;</span><br/><span class="error">E         - 手机号码已被注册</span><br/><span class="error">E         + 注册成功</span><br/><br/>ZongHe\test_script\test_register.py:24: AssertionError<br/> ------------------------------Captured stdout call------------------------------ <br/>测试数据：{&#x27;data&#x27;: {&#x27;mobilephone&#x27;: &#x27;18610210310&#x27;, &#x27;pwd&#x27;: &#x27;123456789123456789&#x27;}, &#x27;msg&#x27;: &#x27;手机号码已被注册&#x27;}
-发送post请求，url:http://jy001:8081/futureloan/mvc/api/member/register,请求参数:{&#x27;data&#x27;: {&#x27;mobilephone&#x27;: &#x27;18610210310&#x27;, &#x27;pwd&#x27;: &#x27;123456789123456789&#x27;}},成功
-<br/></div></td></tr></tbody>
-      <tbody class="failed results-table-row">
-        <tr>
-          <td class="col-result">Failed</td>
-          <td class="col-name">ZongHe/test_script/test_register.py::test_register_fail[fail_data1]</td>
-          <td class="col-duration">0.01</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">fail_data = {&#x27;data&#x27;: {&#x27;Mobilephone&#x27;: &#x27;13454785815&#x27;, &#x27;pwd&#x27;: &#x27;123456&#x27;, &#x27;regname&#x27;: &#x27;曹贼&#x27;}, &#x27;msg&#x27;: &#x27;手机号码已被注册&#x27;}<br/>url = &#x27;http://jy001:8081/&#x27;, baserequests = &lt;ZongHe.caw.BaseRequests.BaseRequests object at 0x000001F5538A4910&gt;<br/><br/>    def test_register_fail(fail_data,url,baserequests):<br/>        print(f&quot;测试数据：{fail_data}&quot;)<br/>        # 下发注册的请求<br/>        # fixture session级别conftest.py(放置脚本层的公共方法，就是一个测试前置）<br/>        r = Member.register(url,baserequests,fail_data[&#x27;data&#x27;])<br/>        # 校验结果<br/>&gt;       assert r.json()[&#x27;msg&#x27;] == fail_data[&#x27;msg&#x27;]<br/><span class="error">E       AssertionError: assert &#x27;注册成功&#x27; == &#x27;手机号码已被注册&#x27;</span><br/><span class="error">E         - 手机号码已被注册</span><br/><span class="error">E         + 注册成功</span><br/><br/>ZongHe\test_script\test_register.py:24: AssertionError<br/> ------------------------------Captured stdout call------------------------------ <br/>测试数据：{&#x27;data&#x27;: {&#x27;Mobilephone&#x27;: &#x27;13454785815&#x27;, &#x27;pwd&#x27;: &#x27;123456&#x27;, &#x27;regname&#x27;: &#x27;曹贼&#x27;}, &#x27;msg&#x27;: &#x27;手机号码已被注册&#x27;}
-发送post请求，url:http://jy001:8081/futureloan/mvc/api/member/register,请求参数:{&#x27;data&#x27;: {&#x27;Mobilephone&#x27;: &#x27;13454785815&#x27;, &#x27;pwd&#x27;: &#x27;123456&#x27;, &#x27;regname&#x27;: &#x27;曹贼&#x27;}},成功
-<br/></div></td></tr></tbody>
-      <tbody class="failed results-table-row">
-        <tr>
-          <td class="col-result">Failed</td>
-          <td class="col-name">ZongHe/test_script/test_register.py::test_register_fail[fail_data2]</td>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_004.py::test_query</td>
           <td class="col-duration">0.00</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">fail_data = {&#x27;data&#x27;: {&#x27;Mobilephone&#x27;: &#x27;18610750327&#x27;, &#x27;pwd&#x27;: &#x27;123456789123456789&#x27;, &#x27;regname&#x27;: &#x27;曹贼&#x27;}, &#x27;msg&#x27;: &#x27;手机号码已被注册&#x27;}<br/>url = &#x27;http://jy001:8081/&#x27;, baserequests = &lt;ZongHe.caw.BaseRequests.BaseRequests object at 0x000001F5538A4910&gt;<br/><br/>    def test_register_fail(fail_data,url,baserequests):<br/>        print(f&quot;测试数据：{fail_data}&quot;)<br/>        # 下发注册的请求<br/>        # fixture session级别conftest.py(放置脚本层的公共方法，就是一个测试前置）<br/>        r = Member.register(url,baserequests,fail_data[&#x27;data&#x27;])<br/>        # 校验结果<br/>&gt;       assert r.json()[&#x27;msg&#x27;] == fail_data[&#x27;msg&#x27;]<br/><span class="error">E       AssertionError: assert &#x27;注册成功&#x27; == &#x27;手机号码已被注册&#x27;</span><br/><span class="error">E         - 手机号码已被注册</span><br/><span class="error">E         + 注册成功</span><br/><br/>ZongHe\test_script\test_register.py:24: AssertionError<br/> ------------------------------Captured stdout call------------------------------ <br/>测试数据：{&#x27;data&#x27;: {&#x27;Mobilephone&#x27;: &#x27;18610750327&#x27;, &#x27;pwd&#x27;: &#x27;123456789123456789&#x27;, &#x27;regname&#x27;: &#x27;曹贼&#x27;}, &#x27;msg&#x27;: &#x27;手机号码已被注册&#x27;}
-发送post请求，url:http://jy001:8081/futureloan/mvc/api/member/register,请求参数:{&#x27;data&#x27;: {&#x27;Mobilephone&#x27;: &#x27;18610750327&#x27;, &#x27;pwd&#x27;: &#x27;123456789123456789&#x27;, &#x27;regname&#x27;: &#x27;曹贼&#x27;}},成功
-<br/></div></td></tr></tbody>
-      <tbody class="failed results-table-row">
-        <tr>
-          <td class="col-result">Failed</td>
-          <td class="col-name">ZongHe/test_script/test_register.py::test_register_success[success_data0]</td>
-          <td class="col-duration">4.16</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">success_data = {&#x27;data&#x27;: {&#x27;mobilephone&#x27;: &#x27;18620740248&#x27;, &#x27;pwd&#x27;: &#x27;123456&#x27;}, &#x27;expect&#x27;: {&#x27;code&#x27;: &#x27;10001&#x27;, &#x27;data&#x27;: {}, &#x27;msg&#x27;: &#x27;注册成功&#x27;, &#x27;status&#x27;: 1}}<br/>url = &#x27;http://jy001:8081/&#x27;, db = {&#x27;host&#x27;: &#x27;jy001&#x27;, &#x27;name&#x27;: &#x27;future&#x27;, &#x27;port&#x27;: 4406, &#x27;pwd&#x27;: &#x27;123456&#x27;, ...}<br/>baserequests = &lt;ZongHe.caw.BaseRequests.BaseRequests object at 0x000001F5538A4910&gt;<br/><br/>    def test_register_success(success_data,url,db,baserequests):<br/>        print(f&quot;测试数据:{success_data}&quot;)<br/>        # 获取手机号码<br/>        mobile =success_data[&#x27;data&#x27;][&#x27;mobilephone&#x27;]<br/>        # 下发注册的请求<br/>        # 检查结果，1.检查结果应与预期结果一致<br/>        DbOp.delete_user(db, mobile)<br/>        r =Member.register(url,baserequests,success_data[&#x27;data&#x27;])<br/>        assert r.json()[&#x27;msg&#x27;]==success_data[&#x27;expect&#x27;][&#x27;msg&#x27;]<br/>        assert r.json()[&#x27;code&#x27;]==success_data[&#x27;expect&#x27;][&#x27;code&#x27;]<br/>        # 检查结果，2，检查系统中用户注册成功<br/>        # 查询用户，检查手机号在返回的结果中。<br/>        sql2 = f&quot;select mobilephone from member where mobilephone={mobile}&quot;<br/>        conn =Mysql.connect(db)<br/>        Mysql.select_user(conn,sql2)<br/>        Mysql.disconnect(conn)<br/>        # 清理环境：删除注册用户<br/>        # 方式1：查询用户，检查手机号在返回的结果中。<br/>&gt;       r = Mysql.select_user(conn,sql2)<br/><br/>ZongHe\test_script\test_register.py:49: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>conn = &lt;pymysql.connections.Connection object at 0x000001F5542D1550&gt;<br/>sql2 = &#x27;select mobilephone from member where mobilephone=18620740248&#x27;<br/><br/>    def select_user(conn,sql2):<br/>        try:<br/>            c =conn.cursor() #  获取游标<br/>            c.execute(sql2) # 使用游标执行sql语句<br/>            list =c.fetchall()<br/>            conn.commit()  #  提交<br/>            c.close()  # 关闭游标<br/>            print(f&quot;执行查询sql语句成功:{sql2}&quot;)<br/>        except Exception as e:<br/>            print(f&quot;执行查询sql语句失败，异常信息为:{e}&quot;)<br/>&gt;       return list<br/><span class="error">E       UnboundLocalError: local variable &#x27;list&#x27; referenced before assignment</span><br/><br/>ZongHe\caw\Mysql.py:48: UnboundLocalError<br/> ------------------------------Captured stdout call------------------------------ <br/>测试数据:{&#x27;data&#x27;: {&#x27;mobilephone&#x27;: &#x27;18620740248&#x27;, &#x27;pwd&#x27;: &#x27;123456&#x27;}, &#x27;expect&#x27;: {&#x27;code&#x27;: &#x27;10001&#x27;, &#x27;data&#x27;: {}, &#x27;msg&#x27;: &#x27;注册成功&#x27;, &#x27;status&#x27;: 1}}
-数据库连接成功
-执行sql语句成功:delete from member where mobilephone=18620740248
-发送post请求，url:http://jy001:8081/futureloan/mvc/api/member/register,请求参数:{&#x27;data&#x27;: {&#x27;mobilephone&#x27;: &#x27;18620740248&#x27;, &#x27;pwd&#x27;: &#x27;123456&#x27;}},成功
-数据库连接成功
-执行查询sql语句成功:select mobilephone from member where mobilephone=18620740248
-执行查询sql语句失败，异常信息为:(0, &#x27;&#x27;)
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>查询功能，不需要登录
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">ZongHe/test_script/test_login.py::test_login[setup_data0-login_data0]</td>
-          <td class="col-duration">0.02</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>============ &lt;class &#x27;str&#x27;&gt;
-============ &lt;class &#x27;dict&#x27;&gt;
-测试数据：{&#x27;casedata&#x27;: {&#x27;mobilephone&#x27;: &#x27;18066668888&#x27;, &#x27;pwd&#x27;: &#x27;abcd_1&#x27;}, &#x27;expect&#x27;: {&#x27;code&#x27;: 10001, &#x27;data&#x27;: {}, &#x27;msg&#x27;: &#x27;注册成功&#x27;, &#x27;status&#x27;: 1}}
-发送post请求，url:http://jy001:8081/futureloan/mvc/api/member/register,请求参数:{&#x27;data&#x27;: {&#x27;mobilephone&#x27;: &#x27;18066668888&#x27;, &#x27;pwd&#x27;: &#x27;abcd_1&#x27;}},成功
-<br/> ------------------------------Captured stdout call------------------------------ <br/>发送post请求，url:http://jy001:8081/futureloan/mvc/api/member/login,请求参数:{&#x27;data&#x27;: {&#x27;mobilephone&#x27;: &#x27;18066668888&#x27;, &#x27;pwd&#x27;: &#x27;abcd_1&#x27;}},成功
------------- {&#x27;status&#x27;: 1, &#x27;code&#x27;: &#x27;10001&#x27;, &#x27;data&#x27;: None, &#x27;msg&#x27;: &#x27;登录成功&#x27;}
-<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">ZongHe/test_script/test_login.py::test_login[setup_data0-login_data1]</td>
+          <td class="col-name">test_004.py::test_add</td>
           <td class="col-duration">0.00</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>发送post请求，url:http://jy001:8081/futureloan/mvc/api/member/login,请求参数:{&#x27;data&#x27;: {&#x27;mobilephone&#x27;: &#x27;18066668888&#x27;, &#x27;pwd&#x27;: &#x27;abcd_123&#x27;}},成功
------------- {&#x27;status&#x27;: 0, &#x27;code&#x27;: &#x27;20111&#x27;, &#x27;data&#x27;: None, &#x27;msg&#x27;: &#x27;用户名或密码错误&#x27;}
+            <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>登录系统
+<br/> ------------------------------Captured stdout call------------------------------ <br/>添加功能，需要登录
+<br/> ----------------------------Captured stdout teardown---------------------------- <br/>退出系统
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">ZongHe/test_script/test_login.py::test_login[setup_data0-login_data2]</td>
+          <td class="col-name">test_004.py::test_delete</td>
           <td class="col-duration">0.00</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>发送post请求，url:http://jy001:8081/futureloan/mvc/api/member/login,请求参数:{&#x27;data&#x27;: {&#x27;mobilephone&#x27;: &#x27;18066668888&#x27;, &#x27;pwd&#x27;: &#x27;&#x27;}},成功
------------- {&#x27;status&#x27;: 0, &#x27;code&#x27;: &#x27;20103&#x27;, &#x27;data&#x27;: None, &#x27;msg&#x27;: &#x27;密码不能为空&#x27;}
-<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">ZongHe/test_script/test_login.py::test_login[setup_data0-login_data3]</td>
-          <td class="col-duration">0.00</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>发送post请求，url:http://jy001:8081/futureloan/mvc/api/member/login,请求参数:{&#x27;data&#x27;: {&#x27;mobilephone&#x27;: &#x27;18066668888&#x27;}},成功
------------- {&#x27;status&#x27;: 0, &#x27;code&#x27;: &#x27;20103&#x27;, &#x27;data&#x27;: None, &#x27;msg&#x27;: &#x27;密码不能为空&#x27;}
-<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">ZongHe/test_script/test_login.py::test_login[setup_data0-login_data4]</td>
-          <td class="col-duration">0.00</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>发送post请求，url:http://jy001:8081/futureloan/mvc/api/member/login,请求参数:{&#x27;data&#x27;: {&#x27;mobilephone&#x27;: &#x27;&#x27;, &#x27;pwd&#x27;: &#x27;abcd_1&#x27;}},成功
------------- {&#x27;status&#x27;: 0, &#x27;code&#x27;: &#x27;20103&#x27;, &#x27;data&#x27;: None, &#x27;msg&#x27;: &#x27;手机号不能为空&#x27;}
-<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">ZongHe/test_script/test_login.py::test_login[setup_data0-login_data5]</td>
-          <td class="col-duration">14.04</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>发送post请求，url:http://jy001:8081/futureloan/mvc/api/member/login,请求参数:{&#x27;data&#x27;: {&#x27;pwd&#x27;: &#x27;abcd_1&#x27;}},成功
------------- {&#x27;status&#x27;: 0, &#x27;code&#x27;: &#x27;20103&#x27;, &#x27;data&#x27;: None, &#x27;msg&#x27;: &#x27;手机号不能为空&#x27;}
-<br/> ----------------------------Captured stdout teardown---------------------------- <br/>数据库连接成功
-执行sql语句成功:delete from member where mobilephone=18066668888
-<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">ZongHe/test_script/test_register.py::test_register_fail[fail_data3]</td>
-          <td class="col-duration">0.00</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>测试数据：{&#x27;data&#x27;: {&#x27;pwd&#x27;: &#x27;1234567&#x27;, &#x27;regname&#x27;: &#x27;闪电&#x27;}, &#x27;msg&#x27;: &#x27;手机号不能为空&#x27;}
-发送post请求，url:http://jy001:8081/futureloan/mvc/api/member/register,请求参数:{&#x27;data&#x27;: {&#x27;pwd&#x27;: &#x27;1234567&#x27;, &#x27;regname&#x27;: &#x27;闪电&#x27;}},成功
-<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">ZongHe/test_script/test_register.py::test_register_fail[fail_data4]</td>
-          <td class="col-duration">0.00</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>测试数据：{&#x27;data&#x27;: {&#x27;Mobilephone&#x27;: &#x27;1357189655&#x27;, &#x27;pwd&#x27;: &#x27;1234567&#x27;}, &#x27;msg&#x27;: &#x27;手机号码格式不正确&#x27;}
-发送post请求，url:http://jy001:8081/futureloan/mvc/api/member/register,请求参数:{&#x27;data&#x27;: {&#x27;Mobilephone&#x27;: &#x27;1357189655&#x27;, &#x27;pwd&#x27;: &#x27;1234567&#x27;}},成功
-<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">ZongHe/test_script/test_register.py::test_register_fail[fail_data5]</td>
-          <td class="col-duration">0.00</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>测试数据：{&#x27;data&#x27;: {&#x27;Mobilephone&#x27;: &#x27;135718965523&#x27;, &#x27;pwd&#x27;: &#x27;1234567}&#x27;, &#x27;regname&#x27;: &#x27;曹贼&#x27;}, &#x27;msg&#x27;: &#x27;手机号码格式不正确&#x27;}
-发送post请求，url:http://jy001:8081/futureloan/mvc/api/member/register,请求参数:{&#x27;data&#x27;: {&#x27;Mobilephone&#x27;: &#x27;135718965523&#x27;, &#x27;pwd&#x27;: &#x27;1234567}&#x27;, &#x27;regname&#x27;: &#x27;曹贼&#x27;}},成功
-<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">ZongHe/test_script/test_register.py::test_register_fail[fail_data6]</td>
-          <td class="col-duration">0.00</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>测试数据：{&#x27;data&#x27;: {&#x27;Mobilephone&#x27;: &#x27;@1234567890&#x27;, &#x27;pwd&#x27;: &#x27;1234567&#x27;, &#x27;regname&#x27;: &#x27;曹贼&#x27;}, &#x27;msg&#x27;: &#x27;手机号码格式不正确&#x27;}
-发送post请求，url:http://jy001:8081/futureloan/mvc/api/member/register,请求参数:{&#x27;data&#x27;: {&#x27;Mobilephone&#x27;: &#x27;@1234567890&#x27;, &#x27;pwd&#x27;: &#x27;1234567&#x27;, &#x27;regname&#x27;: &#x27;曹贼&#x27;}},成功
-<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">ZongHe/test_script/test_register.py::test_register_fail[fail_data7]</td>
-          <td class="col-duration">0.00</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>测试数据：{&#x27;data&#x27;: {&#x27;Mobilephone&#x27;: &#x27;23571896552&#x27;, &#x27;pwd&#x27;: &#x27;1234567&#x27;, &#x27;regname&#x27;: &#x27;遭贼&#x27;}, &#x27;msg&#x27;: &#x27;手机号码格式不正确&#x27;}
-发送post请求，url:http://jy001:8081/futureloan/mvc/api/member/register,请求参数:{&#x27;data&#x27;: {&#x27;Mobilephone&#x27;: &#x27;23571896552&#x27;, &#x27;pwd&#x27;: &#x27;1234567&#x27;, &#x27;regname&#x27;: &#x27;遭贼&#x27;}},成功
-<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">ZongHe/test_script/test_register.py::test_register_fail[fail_data8]</td>
-          <td class="col-duration">0.00</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>测试数据：{&#x27;data&#x27;: {&#x27;Mobilephone&#x27;: &#x27;13567890987&#x27;, &#x27;pwd&#x27;: &#x27;12345&#x27;, &#x27;regname&#x27;: &#x27;诸葛村夫&#x27;}, &#x27;msg&#x27;: &#x27;密码长度必须为6~18&#x27;}
-发送post请求，url:http://jy001:8081/futureloan/mvc/api/member/register,请求参数:{&#x27;data&#x27;: {&#x27;Mobilephone&#x27;: &#x27;13567890987&#x27;, &#x27;pwd&#x27;: &#x27;12345&#x27;, &#x27;regname&#x27;: &#x27;诸葛村夫&#x27;}},成功
-<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">ZongHe/test_script/test_register.py::test_register_fail[fail_data9]</td>
-          <td class="col-duration">0.00</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>测试数据：{&#x27;data&#x27;: {&#x27;Mobilephone&#x27;: &#x27;13567890987&#x27;, &#x27;pwd&#x27;: &#x27;1234567890123456789&#x27;, &#x27;regname&#x27;: &#x27;闪电&#x27;}, &#x27;msg&#x27;: &#x27;密码长度必须为6~18&#x27;}
-发送post请求，url:http://jy001:8081/futureloan/mvc/api/member/register,请求参数:{&#x27;data&#x27;: {&#x27;Mobilephone&#x27;: &#x27;13567890987&#x27;, &#x27;pwd&#x27;: &#x27;1234567890123456789&#x27;, &#x27;regname&#x27;: &#x27;闪电&#x27;}},成功
-<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">ZongHe/test_script/test_register.py::test_register_fail[fail_data10]</td>
-          <td class="col-duration">0.00</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>测试数据：{&#x27;data&#x27;: {&#x27;Mobilephone&#x27;: &#x27;13567890987&#x27;, &#x27;regname&#x27;: &#x27;闪电&#x27;}, &#x27;msg&#x27;: &#x27;密码不能为空&#x27;}
-发送post请求，url:http://jy001:8081/futureloan/mvc/api/member/register,请求参数:{&#x27;data&#x27;: {&#x27;Mobilephone&#x27;: &#x27;13567890987&#x27;, &#x27;regname&#x27;: &#x27;闪电&#x27;}},成功
-<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">ZongHe/test_script/test_register.py::test_register_fail[fail_data11]</td>
-          <td class="col-duration">0.00</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>测试数据：{&#x27;data&#x27;: {&#x27;Mobilephone&#x27;: &#x27;18610750327&#x27;, &#x27;pwd&#x27;: &#x27;123456789&#x27;, &#x27;regname&#x27;: &#x27;闪电&#x27;}, &#x27;msg&#x27;: &#x27;手机号码已被注册&#x27;}
-发送post请求，url:http://jy001:8081/futureloan/mvc/api/member/register,请求参数:{&#x27;data&#x27;: {&#x27;Mobilephone&#x27;: &#x27;18610750327&#x27;, &#x27;pwd&#x27;: &#x27;123456789&#x27;, &#x27;regname&#x27;: &#x27;闪电&#x27;}},成功
+            <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>登录系统
+<br/> ------------------------------Captured stdout call------------------------------ <br/>删除功能，需要登录
+<br/> ----------------------------Captured stdout teardown---------------------------- <br/>退出系统
 <br/></div></td></tr></tbody></table></body></html>

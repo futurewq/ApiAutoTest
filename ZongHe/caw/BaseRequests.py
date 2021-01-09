@@ -36,5 +36,5 @@ if __name__ == '__main__':
     print(r.text)
     r = b.post("http://www.httpbin.org/post", data={"user": "root"})
     print(r.text)
-    r = b.get("http://jyoo1:8081")
+    r = b.get("http://jy001:8081")
     print(r.text)
